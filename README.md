@@ -1,5 +1,9 @@
 <p align="center">
-  <a href="https://jialuoma.com/"><img width="320" src="https://static.jialuoma.cn/img/logo_jialuoma.png"></a>
+  <a href="https://jialuoma.com/">
+    <img width="320" src="https://demo.jialuoma.cn/content/machete_icon.png">
+    <br/>
+    <span>filesite</span>
+  </a>
 </p>
 
 <p align="center">
