@@ -5,7 +5,7 @@
     <!-- <span>filesite</span> -->
   </a>
 
-  [filesite](https://filesite.io/){target="_blank"}
+  [filesite](https://filesite.io/){:target="_blank"}
 </p>
 
 
@@ -25,7 +25,7 @@
 <!-- <a href="https://demo.jialuoma.cn/admin/#/filemange/index" target="_blank">
 <span>在线预览</span>
 </a> -->
-[在线预览](https://demo.jialuoma.cn/admin/#/filemange/index){target="_blank"}
+[在线预览](https://demo.jialuoma.cn/admin/#/filemange/index){:target="_blank"}
 
 ## 项目准备
 
@@ -70,7 +70,7 @@ npm run build:prod
 <!-- <a href="https://demo.jialuoma.cn/admin/#/filemange/index" target="_blank">
 <span>在线 Demo</span>
 </a> -->
-[在线 Demo](https://demo.jialuoma.cn/admin/#/filemange/index){target="_blank"}
+[在线 Demo](https://demo.jialuoma.cn/admin/#/filemange/index){:target="_blank"}
 
 
 Copyright (c) 2022 FileSite
