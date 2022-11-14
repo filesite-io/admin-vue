@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://filesite.io/">
+  <a href="https://filesite.io/" target="_blank">
     <img width="320" src="https://demo.jialuoma.cn/content/machete_icon.png">
     <br/>
     <span>filesite</span>
@@ -7,10 +7,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/vuejs/vue">
+  <a href="https://github.com/vuejs/vue" target="_blank">
     <img src="https://img.shields.io/badge/vue-2.6.10-brightgreen.svg" alt="vue">
   </a>
-  <a href="https://github.com/ElemeFE/element">
+  <a href="https://github.com/ElemeFE/element" target="_blank">
     <img src="https://img.shields.io/badge/element--ui-2.7.0-brightgreen.svg" alt="element-ui">
   </a>
 </p>
@@ -19,8 +19,9 @@
 ## 简介
 [vue-file-admin](https://demo.jialuoma.cn/admin/#/filemange/index)是一个文件管理后台，基于vue，vue-router，element-ui实现。它类似于window系统的文件管理的形式管理文件，可以创建文件夹，文件夹里面可以上传各个类型的文件以及再次创建文件夹，也可以删除、重命名、移动文件或者文件夹。目前本项目只支持上传图片文件，如需上传其他文件，比如视频，文本等，可自行修改可上传的文件范围即可。 
 
-
-- [在线预览](https://demo.jialuoma.cn/admin/#/filemange/index)
+<a href="https://demo.jialuoma.cn/admin/#/filemange/index" target="_blank">
+<span>在线预览</span>
+</a>
 
 
 ## 项目准备
@@ -63,7 +64,9 @@ npm run build:prod
 
 ## Online Demo
 
-[在线 Demo](https://demo.jialuoma.cn/admin/#/filemange/index)
+<a href="https://demo.jialuoma.cn/admin/#/filemange/index" target="_blank">
+<span>在线 Demo</span>
+</a>
 
 
-Copyright (c) 2022 JiaLuoMa
+Copyright (c) 2022 FileSite
