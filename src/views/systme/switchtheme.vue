@@ -13,7 +13,7 @@
             </el-select>
             <div class="Submit1">
                 <el-button @click="skinSubmit" :loading="skinloading" type="primary">提交</el-button>
-                <a v-if="skinAsk" class="to_front_web" target="_blank" :href="skinLink"><el-button type="success" round>查看{{skinlabel}}站点</el-button></a>
+                <a v-if="skinAsk" class="to_front_web" target="_blank" :href="skinLink"><el-button type="success" round>查看&nbsp;{{skinlabel}}&nbsp;站点</el-button></a>
                 
             </div>
         </div>
@@ -32,16 +32,20 @@ export default {
     data() {
         return {
             options: [{
+                value: 'beauty',
+                label: '图片站-美图',
+                link:'/?'
+                },{
+                value: 'googleimage',
+                label: '图片站-默认',
+                link:'/?'
+                },{
                 value: 'manual',
                 label: '文档站',
                 link:'/?'
                 }, {
                 value: 'webdirectory',
                 label: '导航站',
-                link:'/?'
-                }, {
-                value: 'googleimage',
-                label: '图片站',
                 link:'/?'
                 }, {
                 value: 'videoblog',

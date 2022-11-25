@@ -1,7 +1,8 @@
 module.exports = {
 
   title: '嘉洛马',
-  address: 'https://demo.jialuoma.cn',
+    address: 'http://192.168.0.100',
+  //address: 'https://demo.jialuoma.cn',
 
   /**
    * @type {boolean} true | false

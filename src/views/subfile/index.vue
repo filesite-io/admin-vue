@@ -90,9 +90,9 @@
                     min-width="30%">
                         <template slot-scope="scope">
                             <div class="file_show">
-                                <a title="点击查看原文件" :href="imgurl+scope.row.image" target="_blank">
+                                <a title="点击查看原文件" :href="scope.row.image" target="_blank">
                                     <!-- {{scope.row.suffix}} -->
-                                    <img v-if="['jpg', 'jpeg', 'png', 'gif', 'webp'].indexOf(scope.row.suffix) != -1" :src="imgurl+scope.row.image" alt="图片"/>
+                                    <img v-if="['jpg', 'jpeg', 'png', 'gif', 'webp'].indexOf(scope.row.suffix) != -1" :src="scope.row.image" alt="图片"/>
                                     <div v-else-if="scope.row.suffix == 'mp4'"><svg class="icon" style="width:7em;height:7em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2375"><path d="M898.71 706.68c-31.08 0-56.5-25.43-56.5-56.5V401.21c0-31.08 25.43-56.5 56.5-56.5 31.08 0 56.5 25.43 56.5 56.5v248.97c0 31.08-25.42 56.5-56.5 56.5z" fill="#F7B52C" p-id="2376"></path><path d="M691.58 886.72H217.32c-82.84 0-150.63-67.78-150.63-150.63V301.24c0-82.84 67.78-150.63 150.63-150.63h474.27c82.84 0 150.63 67.78 150.63 150.63V736.1c-0.01 82.84-67.79 150.62-150.64 150.62z" fill="#F7B52C" p-id="2377"></path><path d="M430.71 664.86l128.62-128.62c13.93-13.93 13.93-36.52 0-50.45L430.71 357.17c-22.47-22.47-60.9-6.56-60.9 25.22v257.24c0 31.79 38.42 47.71 60.9 25.23z" fill="#FFFFFF" p-id="2378"></path></svg></div>
                                     <div v-else-if="scope.row.suffix == 'mp3'"><svg class="icon" style="width: 7em;height: 7em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11396"><path d="M875.52 433.152q-7.168-1.024-12.8-10.24t-8.704-33.792q-5.12-39.936-26.112-58.88t-65.024-27.136q-46.08-9.216-81.408-37.376t-58.88-52.736q-22.528-21.504-34.816-15.36t-12.288 22.528l0 44.032 0 96.256q0 57.344-0.512 123.904t-0.512 125.952l0 104.448 0 58.368q1.024 24.576-7.68 54.784t-32.768 56.832-64 45.568-99.328 22.016q-60.416 3.072-109.056-21.504t-75.264-61.952-26.112-81.92 38.4-83.456 81.92-54.272 84.992-16.896 73.216 5.632 47.616 13.312l0-289.792q0-120.832 1.024-272.384 0-29.696 15.36-48.64t40.96-22.016q21.504-3.072 35.328 8.704t28.16 32.768 35.328 47.616 56.832 52.224q30.72 23.552 53.76 33.792t43.008 18.944 39.424 20.992 43.008 39.936q23.552 26.624 28.672 55.296t0.512 52.224-14.848 38.4-17.408 13.824z" p-id="11397"></path></svg></div>
                                     <div v-else-if="scope.row.suffix == 'url'"><svg class="icon" style="width:6em;height:6em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9877"><path d="M62.296463 576.23471l64.234709-64.23471 85.676565 85.646279-42.853425 42.853425a121.140424 121.140424 0 0 0 0 171.292559l42.853425 42.853425a121.140424 121.140424 0 0 0 171.292559 0l214.145983-214.145984a121.140424 121.140424 0 0 0 0-171.322844l-42.823139-42.823139a120.080445 120.080445 0 0 0-24.440081-18.413345l88.705075-88.67479 85.64628 85.64628a211.995741 211.995741 0 0 1 0 299.822548l-256.969124 256.969123a211.995741 211.995741 0 0 1-299.822548 0l-85.646279-85.646279a211.995741 211.995741 0 0 1 0-299.822548z" fill="#E13455" p-id="9878"></path><path d="M961.703537 447.76529l-64.234709 64.23471-85.676565-85.646279 42.853425-42.853425a121.140424 121.140424 0 0 0 0-171.292559l-42.853425-42.853425a121.140424 121.140424 0 0 0-171.292559 0l-214.145983 214.145984a121.140424 121.140424 0 0 0 0 171.322844l42.823139 42.823139a120.080445 120.080445 0 0 0 24.440081 18.413345L404.911866 704.734414l-85.64628-85.64628a211.995741 211.995741 0 0 1 0-299.822548l256.969124-256.969123a211.995741 211.995741 0 0 1 299.822548 0l85.646279 85.646279a211.995741 211.995741 0 0 1 0 299.822548z" fill="#F3ADBA" p-id="9879"></path></svg></div>
@@ -233,7 +233,8 @@ export default {
     // 实例还没挂载
   created() {
     this.getFileData();
-    this.uploadCount = 0; //文件上次次数计数    
+    this.uploadCount = 0; //文件上次次数计数 
+    console.log(document.domain);
     //console.log(this.imgurl);
   },
 
@@ -248,8 +249,9 @@ export default {
   data() {
     return {
         // 环境变量
-        //imgurl:process.env.VUE_APP_IMG_URL,
-        imgurl:'https://demo.jialuoma.cn',
+        //imgurl:document.domain,
+        imgurl:process.env.VUE_APP_IMG_URL,
+        //imgurl:'https://demo.jialuoma.cn',
 
         loadingText: '文件获取中...',
         emptyText: '无文件数据',
